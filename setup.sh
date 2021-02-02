@@ -1,5 +1,5 @@
 #!/bin/bash
-sudo xbps-install base-devel libX11-devel libXft-devel libXinerama-devel fontconfig-devel st-terminfo curl xorg font-tanzem dbus-glib nodejs
+sudo xbps-install base-devel libX11-devel libXft-devel libXinerama-devel fontconfig-devel st-terminfo curl xorg font-tanzem dbus-glib nodejs dmenu
 sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.config}"/nvim/autoload/plug.vim --create-dirs \
        https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
 cd dotfiles
