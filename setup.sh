@@ -1,5 +1,5 @@
 #!/bin/bash
-sudo pacman -S git neovim xorg xorg-xinit curl dmenu
+sudo pacman -S neovim xorg xorg-xinit curl dmenu
 sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.config}"/nvim/autoload/plug.vim --create-dirs \
        https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
 git clone https://github.com/Doremmi/dotfiles.git
