@@ -1,15 +1,12 @@
 #!/bin/bash
-sudo pacman -S neovim xorg xorg-xinit curl dmenu
+sudo xbps-install base-devel libX11-devel libXft-devel libXinerama-devel fontconfig-devel st-terminfo curl xorg font-tanzem dbus-glib nodejs
 sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.config}"/nvim/autoload/plug.vim --create-dirs \
        https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
-git clone https://github.com/Doremmi/dotfiles.git
 cd dotfiles
-mv .config ~
-mv .xinitrc ~
-mv .bashrc ~
+cp -r .config ~
+cp -r .xinitrc ~
+cp -r .bashrc ~
 cd ..
-git clone https://aur.archlinux.org/yay.git
-cd yay
-makepkg -si
-cd ..
-yay -S librewolf tamsyn-font-otb
+curl https://linux.palemoon.org/datastore/release/palemoon-29.0.0.linux-x86_64-gtk3.tar.xz > palemoon.tar.xz
+tar -xvf palemoon.tar.xz -C ~/ 
+sudo ln -s ~/palemoon/palemoon /usr/bin/palemoon
