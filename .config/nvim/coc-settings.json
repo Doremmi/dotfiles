@@ -1,0 +1,16 @@
+{
+  "coc.preferences.formatOnSaveFiletypes": [
+    "javascript",
+    "typescript",
+    "typescriptreact",
+    "json",
+    "javascriptreact",
+    "typescript.tsx"
+  ],
+  "diagnostic.virtualText": true,
+  "prettier.tabWidth": 2,
+  "eslint.autoFixOnSave": true,
+  "tsserver.formatOnType": true,
+  "coc.preferences.formatOnType": true,
+  "eslint.format.enable": true
+}
